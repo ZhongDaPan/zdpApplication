@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_3"
+        android:paddingBottom="@dimen/dp_3"
+        android:focusable="false"
+        android:clickable="false"
+        android:background="@drawable/boder_white_oval"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/title_layout"
+        android:layout_height="wrap_content">
+   <TextView
+
+       android:id="@+id/service_paceage_name"
+       android:focusable="false"
+       android:clickable="false"
+       android:textColor="@color/plugin_camera_black"
+       android:gravity="center"
+       android:lineSpacingMultiplier="1.2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:focusableInTouchMode="false"
+        android:id="@+id/service_detail_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+   <View
+       android:id="@+id/line"
+       android:layout_width="wrap_content"
+       android:layout_height="1dp"
+       android:layout_marginTop="7dp"
+       android:background="@color/line"/>
+
+        <RelativeLayout
+            android:id="@+id/check_detail"
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_35">
+            <TextView
+                android:id="@+id/check_detail_text"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:text="@string/check_detail"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_right"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+      <!--  <com.newdjk.doctor.views.ItemView
+            android:id="@+id/check_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_35"
+            app:SetRightImg="@drawable/ic_right"
+            app:leftTVText="@string/check_detail" />-->
+    </LinearLayout>
+</LinearLayout>

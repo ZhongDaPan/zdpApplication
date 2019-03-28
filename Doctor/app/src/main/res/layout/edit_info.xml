@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   style="@style/ll_activity">
+    <include layout="@layout/layout_titlebar"/>
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_260"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="8dp"
+        android:gravity="left|top"
+        android:scrollbars="vertical"
+        android:textColorHint="@color/line"
+        android:textColor="@color/plugin_camera_black"
+        android:textSize="15sp"
+        android:background="@drawable/bg_round_white"/>
+    <TextView
+        android:id="@+id/text_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/plugin_camera_black"
+        android:layout_gravity="right"
+        android:text="0/300"/>
+    <TextView
+        android:id="@+id/next_step"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_shape"
+        android:text="提交"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_width="280dp"
+        android:layout_height="@dimen/dp_50" />
+</LinearLayout>

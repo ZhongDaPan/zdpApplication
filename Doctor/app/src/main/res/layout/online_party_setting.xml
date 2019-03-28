@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ll_activity">
+    <include layout="@layout/layout_titlebar"/>
+    <View style="@style/limit_line"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:gravity="center_vertical"
+        android:layout_height="50dp">
+        <TextView
+            android:text="@string/party_switch"
+            android:textColor="@color/plugin_camera_black"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/party_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:kswAnimationDuration="300"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:kswBackDrawable="@drawable/ios_back_drawable"
+            app:kswThumbDrawable="@drawable/ios_thumb_selector"
+            app:kswThumbMarginBottom="-8dp"
+            app:kswThumbMarginLeft="-5dp"
+            app:kswThumbMarginRight="-5dp"
+            app:kswThumbMarginTop="-2.5dp"
+            app:kswThumbRangeRatio="1.4"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/limit_line1"/>
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:gravity="center_vertical"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_centerVertical="true"
+            android:text="@string/accept_account"
+            android:textColor="@color/plugin_camera_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_centerVertical="true"
+            android:id="@+id/accept_account"
+            android:textColor="#000000"
+            android:background="@null"
+            android:lines="1"
+            android:inputType="number"
+            android:textColorHint="@color/line"
+            android:layout_width="@dimen/dp_50"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <View style="@style/limit_line"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_centerVertical="true"
+            android:text="@string/party_price"
+            android:textColor="@color/plugin_camera_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/party_price"
+            android:textColor="#000000"
+            android:background="@null"
+            android:lines="1"
+            android:inputType="number|numberDecimal"
+            android:textColorHint="@color/line"
+            android:layout_width="@dimen/dp_50"
+            android:gravity="right"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/plugin_camera_black"
+            android:text="元"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/limit_line1"/>
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:gravity="center_vertical"
+        android:layout_height="50dp">
+        <TextView
+            android:text="@string/party_discount"
+            android:layout_centerVertical="true"
+            android:textColor="@color/plugin_camera_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/party_discount"
+            android:textColor="#000000"
+            android:background="@null"
+            android:lines="1"
+            android:inputType="number|numberDecimal"
+            android:textColorHint="@color/line"
+            android:layout_width="@dimen/dp_50"
+            android:gravity="right"
+            android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/plugin_camera_black"
+                android:text="元"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View style="@style/limit_line"/>
+
+    <TextView
+        android:id="@+id/tv_price_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:text=""
+        android:textColor="@color/plugin_camera_black" />
+    <TextView
+        android:id="@+id/save"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_width="280dp"
+        android:layout_height="50dp" />
+</LinearLayout>

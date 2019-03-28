@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar" />
+
+    <LinearLayout
+        android:id="@+id/mSearchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp">
+
+            <com.newdjk.doctor.views.ClearEditText
+                android:id="@+id/et_patient_msg"
+                android:layout_width="280dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10.0dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="15.0dip"
+                android:layout_centerVertical="true"
+                android:hint="请输入医院相关信息"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                android:maxLength="30"
+                android:singleLine="true"
+                android:textSize="12sp"
+                android:paddingLeft="@dimen/dp_10"
+                android:visibility="visible"
+                android:background="@drawable/patient_edit_bg"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/line" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/mTvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/font_gray_3"/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.ajguan.library.EasyRefreshLayout
+            android:id="@+id/easylayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mRecyclerview_hospital"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.ajguan.library.EasyRefreshLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyclerview_city"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+</LinearLayout>
